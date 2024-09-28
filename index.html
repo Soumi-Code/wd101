@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<section>
+		<div class="form-container">
+			<form action="" id="registrationForm">
+				<h2>Registration</h2>
+				<div class="form-group">
+					<span class="icon"><ion-icon name="person"></ion-icon></span>
+					<input type="text" id="name" required>
+					<label>Name</label>
+				</div>
+				<div class="form-group">
+					<span class="icon"><ion-icon name="mail"></ion-icon></span>
+					<input type="email" id="email" required>
+					<label>Email</label>
+				</div>
+				<div class="form-group">
+					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+					<input type="password" id="password" required>
+					<label>Password</label>
+				</div>
+				<div class="form-group">
+					<span class="icon"><ion-icon name="calendar"></ion-icon></span>
+					<input type="date" id="dob" required>
+				</div>
+				<div class="input-box">
+					<label>
+						<input type="checkbox" id="terms" required> I accept the terms and conditions
+					</label>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<div class="table-container">
+			<h2>Entries</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Password</th>
+						<th>Date of Birth</th>
+						<th>Accepted terms?</th>
+					</tr>
+				</thead>
+				<tbody id="output"></tbody>
+			</table>
+		</div>
+	</section>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
