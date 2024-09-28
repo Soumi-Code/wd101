@@ -50,6 +50,25 @@ function saveDataToLocalStorage(name, email, password, dob, acceptedTerms) {
 		dob,
 		acceptedTerms,
 	};
+	const uniqueKey = Date.now();
+	localStorage.setItem(uniqueKey, JSON.stringify(userData));
+}
+document.addEventListener('DOMContentLoaded', function () {
+    loadDataFromLocalStorage();
+});
 
-	localStorage.setItem(name, JSON.stringify(userData));
+function loadDataFromLocalStorage() {
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const userData = JSON.parse(localStorage.getItem(key));
+
+        const newRow = `<tr>
+            <td>${userData.name}</td>
+            <td>${userData.email}</td>
+            <td>${userData.password}</td>
+            <td>${userData.dob}</td>
+            <td>${userData.acceptedTerms}</td>
+        </tr>`;
+        output.innerHTML += newRow;
+    }
 }
